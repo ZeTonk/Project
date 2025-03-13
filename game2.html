@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            background-color: gray;
+            justify-content: space-between;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .box{
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-left: 25%;
+            margin-right: 25%;
+            text-align: center;
+            box-sizing: border-box;
+            box-shadow: 5px 5px grey;
+        }
+        .box h1{  
+            text-align: center;
+            padding-bottom: 30px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        button{
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: orange;
+            color: rgb(230, 242, 253);
+            border-radius: 10px;
+            border-color: white;
+            box-shadow: 1px 1px grey;
+        }
+        audio{
+            padding: 10px;
+            box-shadow: 1px 1px grey;
+        }
+        .button{
+            margin: 30px;
+            background: linear-gradient(to right bottom, rgb(130, 219, 233), rgb(129, 190, 237));
+            color: rgb(230, 242, 253);
+        }
+        .boxes{
+            position: relative;
+        }
+        .right{
+            display: none;
+            margin-left: 45%;
+            margin-right: 50%;
+        }
+        .wrong{
+            display: none;
+            margin-left: 46%;
+            margin-right: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Music Guessing Game:</h1>
+        <h2>Frank Sinatra</h2>
+        <a href="project.html" style="color: white; text-decoration:none;">Home</a>
+    </nav>
+    <div class="box" id="dissapear" style="display: block;">
+        <div class="boxes" >
+            <h1>How to Play</h1>
+            <br>
+            <p>
+                Simple, click the Play Audio button then choose which answer you think is right song title.
+            </p>
+            <br>
+            <button type="button" onclick="reveal()" >
+                Continue
+            </button>
+        </div>
+    </div>
+    <div class="box" id="appear" style="display: none;">
+        <h3>Q1</h3>
+        <h1>What Song is this?</h1>
+        <button>
+            Play Audio 🔊
+        <audio src="https://www.youtube.com/watch?v=BGn2oo-0Dqc" ></audio>
+        </button>
+        <br>
+        <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block'">Something</button>
+        <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block'">Something</button>
+        <br>
+        <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block'">Something</button>
+        <button class="button" type="button" onclick="document.getElementById('right').style.display='block'">Something</button>
+        <br>
+        <button class="right" id="right" onclick="next()">Continue</button>
+        <button class="wrong" id="wrong" type="button" onclick="document.getElementById('correct').style.display='block'">
+            Right Answer
+        </button>
+        <p id="correct" style="display: none;">On Mellancholly Hill</p>
+    </div>
+    <div class="box" id="Q1" style="display: none;">
+        <h3>Q2</h3>
+        <h1>What Song is this?</h1>
+        <button>
+            Play Audio 🔊
+        <audio>
+            <source src="01. Cracker Island (Feat. Thundercat).mp3">
+        </audio>
+        </button>
+        <br>
+        <button class="button" type="button" onclick="document.getElementById('wrong2').style.display='block'">Something</button>
+        <button class="button" type="button" onclick="document.getElementById('right2').style.display='block'">Something</button>
+        <br>
+        <button class="button" type="button" onclick="document.getElementById('wrong2').style.display='block'">Something</button>
+        <button class="button" type="button" onclick="document.getElementById('wrong2').style.display='block'">Something</button>
+        <br>
+        <button class="right" id="right2" onclick="next1()">Continue</button>
+        <button class="wrong" id="wrong2" type="button" onclick="document.getElementById('correct2').style.display='block'">
+            Right Answer
+        </button>
+        <p id="correct2" style="display: none;">Cracker Island</p>
+        <iframe id="correct2" style="display: none;" src="" height="320" width="240" frameborder="1"></iframe>
+    </div>
+    <div class="box" id="Q2" style="display: none;">
+        <h3>Q3</h3>
+        <h1>What Song is this?</h1>
+        <button>
+            Play Audio 🔊
+        <audio>
+            <source src="01. Cracker Island (Feat. Thundercat).mp3">
+        </audio>
+        </button>
+        <br>
+        <button class="button" type="button" onclick="document.getElementById('wrong3').style.display='block'">Something</button>
+        <button class="button" type="button" onclick="document.getElementById('wrong3').style.display='block'">Something</button>
+        <br>
+        <button class="button" type="button" onclick="document.getElementById('right3').style.display='block'">Something</button>
+        <button class="button" type="button" onclick="document.getElementById('wrong3').style.display='block'">Something</button>
+        <br>
+        <button class="right" id="right3" onclick="next2()">Continue</button>
+        <button class="wrong" id="wrong3" type="button" onclick="document.getElementById('correct3').style.display='block'">
+            Right Answer
+        </button>
+        <p id="correct3" style="display: none;">Tired Influencer</p>
+        <iframe id="correct3" style="display: none;" src="" height="320" width="240" frameborder="1"></iframe>
+    </div>
+    <div class="box" id="Q3" style="display: none;">
+        Q4
+        <h1>What Song is this?</h1>
+        <button>
+            Play Audio 🔊
+        <audio>
+            <source src="01. Cracker Island (Feat. Thundercat).mp3">
+        </audio>
+        </button>
+        <br>
+        <button class="button" type="button" onclick="document.getElementById('right4').style.display='block'">Something</button>
+        <button class="button" type="button" onclick="document.getElementById('wrong4').style.display='block'">Something</button>
+        <br>
+        <button class="button" type="button" onclick="document.getElementById('wrong4').style.display='block'">Something</button>
+        <button class="button" type="button" onclick="document.getElementById('wrong4').style.display='block'">Something</button>
+        <br>
+        <button class="right" id="right4" onclick="next3()">Continue</button>
+        <button class="wrong" id="wrong4" type="button" onclick="document.getElementById('correct4').style.display='block'">
+            Right Answer
+        </button>
+        <p id="correct4" style="display: none;">Clint Eastwood</p>
+        <iframe id="correct4" style="display: none;" src="" height="320" width="240" frameborder="1"></iframe>
+    </div>
+</body>
+</html>
