@@ -19,3 +19,8 @@ function next3(){
     document.getElementById('Q4').style.display='none';
 }
 
+function hide() {
+    document.getElementById('hide').style.display= 'none';
+    document.getElementById('wrong').style.display= 'none'
+    
+}
