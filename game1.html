@@ -85,24 +85,33 @@
         </div>
     </div>
     <div class="box" id="appear" style="display: none;">
-        <h3>Q1</h3>
-        <h1>What Song is this?</h1>
-        <button>
-            Play Audio 🔊
-        <audio src="https://www.youtube.com/watch?v=BGn2oo-0Dqc" ></audio>
-        </button>
-        <br>
-        <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block'">Something</button>
-        <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block'">Something</button>
-        <br>
-        <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block'">Something</button>
-        <button class="button" type="button" onclick="document.getElementById('right').style.display='block'">Something</button>
-        <br>
-        <button class="right" id="right" onclick="next()">Continue</button>
-        <button class="wrong" id="wrong" type="button" onclick="document.getElementById('correct').style.display='block'">
+        <div id="hide">
+            <h3>Q1</h3>
+            <h1>What Song is this?</h1>
+            <button>
+                Play Audio 🔊
+            <audio src="https://www.youtube.com/watch?v=BGn2oo-0Dqc" ></audio>
+            </button>
+            <br>
+            <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block'">Something</button>
+            <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block'">Something</button>
+            <br>
+            <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block'">Something</button>
+            <button class="button" type="button" onclick="document.getElementById('right').style.display='block'">Something</button>
+            <br>
+            <button class="right" id="right" onclick="next()">Continue</button>
+        </div>
+        <button class="wrong" id="wrong" type="button" onclick="document.getElementById('correct').style.display='block', hide()">
             Right Answer
         </button>
-        <p id="correct" style="display: none;">On Mellancholly Hill</p>
+        <p id="correct" style="display: none;" onclick="">
+            On Mellancholly Hill
+            <br>
+            <iframe width="500" height="300" src="https://www.youtube.com/embed/S03T47hapAc?si=8TIKyl9J4WCEwycv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <button onclick="next()">Continue</button>
+        </p>
+        <button id="correct" type="button" style="display: none;" onclick="next()">Continue</button>
     </div>
     <div class="box" id="Q1" style="display: none;">
         <h3>Q2</h3>
