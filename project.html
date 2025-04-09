@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Guessing Game</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+            color: white;
+            padding: 10px 20px;
+        }
+        nav{
+            justify-content: space-between;
+            background: linear-gradient(to right bottom, rgb(102, 59, 171), rgb(208, 166, 238));
+        }
+        footer{
+            background-color: gray;
+            justify-content: space-between;
+            text-align: center;
+            padding: 10px 20px;
+            background: linear-gradient(to right bottom, rgb(102, 59, 171), rgb(208, 166, 238));
+        }
+        .Main{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .Musicians{ 
+            padding: 40px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+
+            box-shadow: 3px 3px grey;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+            transition: opacity 0.3s ease-in-out;
+            
+            
+        }
+        img:hover{
+            opacity: 0.5;
+        }
+
+        .Button:hover{
+            opacity: 0;
+            transition: opacity ease-out 0.5s;
+        }
+        footer{
+            padding-bottom: 72px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Music Guessing Game</h1>
+        
+    </nav>
+    <div class="Main">
+        <div class="Musicians">
+            <img src="download.webp" >
+                <div class="Button">
+                    Gorillaz
+                    <a href="game1.html"><Button>Try Game</Button></a>
+                </div>
+            </img>
+        </div>
+        <div class="Musicians">
+            <img src="download (1).webp" >
+                <div class="Button">
+                    Frank Sinatra
+                    <a href="game2.html"><Button>Try Game</Button></a>
+                </div>
+            </img>
+        </div>
+        <div class="Musicians">            
+            <img src="download.jpg" >
+                <div class="Button">
+                    Elvis Presley
+                    <a href="game3.html"><Button>Try Game</Button></a>
+                </div>
+            </img>
+        </div>
+        <div class="Musicians">
+            <img src="images.jpg" >
+                <div class="Button">
+                    Johnny Cash
+                    <a href="game4.html"><Button>Try Game</Button></a>
+                </div>
+            </img>
+        </div>
+        <div class="Musicians">
+            <img src="download.png" >
+                <div class="Button">
+                    Red Hot Chili Peppers
+                    <a href="game5.html"><Button>Try Game</Button></a>
+                </div>
+            </img>
+        </div>
+        <div class="Musicians">
+            <img src="download (1).jpg" >
+                <div class="Button">
+                    Random Artists
+                    <a href="game6.html"><Button>Try Game</Button></a>
+                </div>
+            </img>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>

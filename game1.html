@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js">
+
+    </script>
     <style>
         *{
             margin: 0;
@@ -79,7 +81,7 @@
                 Simple, click the Play Audio button then choose which answer you think is right song title.
             </p>
             <br>
-            <button type="button" onclick="reveal()" >
+            <button type="button" onclick="reveal()">
                 Continue
             </button>
         </div>
@@ -88,99 +90,220 @@
         <div id="hide">
             <h3>Q1</h3>
             <h1>What Song is this?</h1>
-            <button>
+            <button type="button" onclick="document.getElementById('audio1').play();">
                 Play Audio 🔊
-            <audio src="https://www.youtube.com/watch?v=BGn2oo-0Dqc" ></audio>
             </button>
+            
+            <audio id="audio1" src="On Melancholy Hill-[AudioTrimmer.com].mp3" type="audio/mp3"></audio>            
             <br>
-            <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block'">Something</button>
-            <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block'">Something</button>
+            <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block', hide(), onclick=document.getElementById('wrong').style.display='block'">A Manatee</button>
+            <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block' , hide(), onclick=document.getElementById('wrong').style.display='block'">Come with Me</button>
             <br>
-            <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block'">Something</button>
-            <button class="button" type="button" onclick="document.getElementById('right').style.display='block'">Something</button>
+            <button class="button" type="button" onclick="document.getElementById('wrong').style.display='block' , hide(), onclick=document.getElementById('wrong').style.display='block'">On Mellancholly Hill</button>
+            <button class="button" type="button" onclick="document.getElementById('right').style.display='block' ,  onclick=document.getElementById('right').style.display='block'">On Melancholy Hill</button>
             <br>
-            <button class="right" id="right" onclick="next()">Continue</button>
+                <button class="right" id="right" onclick="next()">Continue</button>
         </div>
         <button class="wrong" id="wrong" type="button" onclick="document.getElementById('correct').style.display='block', hide()">
             Right Answer
         </button>
         <p id="correct" style="display: none;" onclick="">
-            On Mellancholly Hill
+            On Melancholly Hill
             <br>
-            <iframe width="500" height="300" src="https://www.youtube.com/embed/S03T47hapAc?si=8TIKyl9J4WCEwycv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe style="background: center;" width="500" height="300" src="https://www.youtube.com/embed/S03T47hapAc?si=8TIKyl9J4WCEwycv" title="YouTube video player" frameborder="1" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
             <br>
             <button onclick="next()">Continue</button>
         </p>
         <button id="correct" type="button" style="display: none;" onclick="next()">Continue</button>
     </div>
     <div class="box" id="Q1" style="display: none;">
-        <h3>Q2</h3>
-        <h1>What Song is this?</h1>
-        <button>
-            Play Audio 🔊
-        <audio>
-            <source src="01. Cracker Island (Feat. Thundercat).mp3">
-        </audio>
-        </button>
-        <br>
-        <button class="button" type="button" onclick="document.getElementById('wrong2').style.display='block'">Something</button>
-        <button class="button" type="button" onclick="document.getElementById('right2').style.display='block'">Something</button>
-        <br>
-        <button class="button" type="button" onclick="document.getElementById('wrong2').style.display='block'">Something</button>
-        <button class="button" type="button" onclick="document.getElementById('wrong2').style.display='block'">Something</button>
-        <br>
-        <button class="right" id="right2" onclick="next1()">Continue</button>
-        <button class="wrong" id="wrong2" type="button" onclick="document.getElementById('correct2').style.display='block'">
+        <div id="hide1">
+            <h3>Q2</h3>
+            <h1>What Song is this?</h1>
+            <button type="button" onclick="document.getElementById('audio2').play();">
+                Play Audio 🔊
+            </button>
+            
+            <audio id="audio2" src="Gorillaz - Feel Good Inc. (Official Video)-[AudioTrimmer.com].mp3" type="audio/mp3"></audio>            
+            <br>
+            <button class="button" type="button" onclick="document.getElementById('wrong1').style.display='block', hide1(), onclick=document.getElementById('wrong1').style.display='block'">Free</button>
+            <button class="button" type="button" onclick="document.getElementById('wrong1').style.display='block' , hide1(), onclick=document.getElementById('wrong1').style.display='block'">Hand in Hand</button>
+            <br>
+            <button class="button" type="button" onclick="document.getElementById('wrong1').style.display='block' , hide1(), onclick=document.getElementById('wrong1').style.display='block'">Windmill</button>
+            <button class="button" type="button" onclick="document.getElementById('right1').style.display='block' ,  onclick=document.getElementById('right1').style.display='block'">Feel Good Inc.</button>
+            <br>
+                <button class="right" id="right1" onclick="next1()">Continue</button>
+        </div>
+        <button class="wrong" id="wrong1" type="button" onclick="document.getElementById('correct1').style.display='block', hide1()">
             Right Answer
         </button>
-        <p id="correct2" style="display: none;">Cracker Island</p>
-        <iframe id="correct2" style="display: none;" src="" height="320" width="240" frameborder="1"></iframe>
+        <p id="correct1" style="display: none;" onclick="">
+            Feel Good Inc.
+            <br>
+            <iframe style="background: center;" width="500" height="300" src="https://www.youtube.com/embed/S03T47hapAc?si=8TIKyl9J4WCEwycv" title="YouTube video player" frameborder="1" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+            <br>
+            <button onclick="next1()">Continue</button>
+        </p>
+        <button id="correct1" type="button" style="display: none;" onclick="next1()">Continue</button>
     </div>
     <div class="box" id="Q2" style="display: none;">
-        <h3>Q3</h3>
-        <h1>What Song is this?</h1>
-        <button>
-            Play Audio 🔊
-        <audio>
-            <source src="01. Cracker Island (Feat. Thundercat).mp3">
-        </audio>
-        </button>
-        <br>
-        <button class="button" type="button" onclick="document.getElementById('wrong3').style.display='block'">Something</button>
-        <button class="button" type="button" onclick="document.getElementById('wrong3').style.display='block'">Something</button>
-        <br>
-        <button class="button" type="button" onclick="document.getElementById('right3').style.display='block'">Something</button>
-        <button class="button" type="button" onclick="document.getElementById('wrong3').style.display='block'">Something</button>
-        <br>
-        <button class="right" id="right3" onclick="next2()">Continue</button>
-        <button class="wrong" id="wrong3" type="button" onclick="document.getElementById('correct3').style.display='block'">
+        <div id="hide2">
+            <h3>Q3</h3>
+            <h1>What Song is this?</h1>
+            <button type="button" onclick="document.getElementById('audio3').play();">
+                Play Audio 🔊
+            </button>
+            
+            <audio id="audio3" src="Gorillaz - 19-2000 HQ audio-[AudioTrimmer.com].mp3" type="audio/mp3"></audio>            
+            <br>
+            <button class="button" type="button" onclick="document.getElementById('wrong2').style.display='block', hide2(), onclick=document.getElementById('wrong2').style.display='block'">IDK</button>
+            <button class="button" type="button" onclick="document.getElementById('right2').style.display='block' , onclick=document.getElementById('right2').style.display='block'">19-2000</button>
+            <br>
+            <button class="button" type="button" onclick="document.getElementById('wrong2').style.display='block' , hide2(), onclick=document.getElementById('wrong2').style.display='block'">Spinning</button>
+            <button class="button" type="button" onclick="document.getElementById('wrong2').style.display='block' , hide2(), onclick=document.getElementById('wrong2').style.display='block'">Around Me</button>
+            <br>
+                <button class="right" id="right2" onclick="next2()">Continue</button>
+        </div>
+        <button class="wrong" id="wrong2" type="button" onclick="document.getElementById('correct2').style.display='block', hide2()">
             Right Answer
         </button>
-        <p id="correct3" style="display: none;">Tired Influencer</p>
-        <iframe id="correct3" style="display: none;" src="" height="320" width="240" frameborder="1"></iframe>
+        <p id="correct2" style="display: none;" onclick="">
+            19-2000
+            <br>
+            <iframe style="background: center;" width="500" height="300" src="https://www.youtube.com/embed/S03T47hapAc?si=8TIKyl9J4WCEwycv" title="YouTube video player" frameborder="1" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+            <br>
+            <button onclick="next2()">Continue</button>
+        </p>
+        <button id="correct2" type="button" style="display: none;" onclick="next2()">Continue</button>
     </div>
     <div class="box" id="Q3" style="display: none;">
-        Q4
-        <h1>What Song is this?</h1>
-        <button>
-            Play Audio 🔊
-        <audio>
-            <source src="01. Cracker Island (Feat. Thundercat).mp3">
-        </audio>
-        </button>
-        <br>
-        <button class="button" type="button" onclick="document.getElementById('right4').style.display='block'">Something</button>
-        <button class="button" type="button" onclick="document.getElementById('wrong4').style.display='block'">Something</button>
-        <br>
-        <button class="button" type="button" onclick="document.getElementById('wrong4').style.display='block'">Something</button>
-        <button class="button" type="button" onclick="document.getElementById('wrong4').style.display='block'">Something</button>
-        <br>
-        <button class="right" id="right4" onclick="next3()">Continue</button>
-        <button class="wrong" id="wrong4" type="button" onclick="document.getElementById('correct4').style.display='block'">
+        <div id="hide3">
+            <h3>Q4</h3>
+            <h1>What Song is this?</h1>
+            <button type="button" onclick="document.getElementById('audio3').play();">
+                Play Audio 🔊
+            </button>
+            
+            <audio id="audio4" src="Gorillaz - Clint Eastwood (Official Video)-[AudioTrimmer.com].mp3" type="audio/mp3"></audio>            
+            <br>
+            <button class="button" type="button" onclick="document.getElementById('right3').style.display='block', onclick=document.getElementById('right3').style.display='block'">Clint Eastwood</button>
+            <button class="button" type="button" onclick="document.getElementById('wrong3').style.display='block' , hide3(), onclick=document.getElementById('wrong3').style.display='block'">The Future</button>
+            <br>
+            <button class="button" type="button" onclick="document.getElementById('wrong3').style.display='block' , hide3(), onclick=document.getElementById('wrong3').style.display='block'">Sunshine in a Bag</button>
+            <button class="button" type="button" onclick="document.getElementById('wrong3').style.display='block' ,hide3(),  onclick=document.getElementById('wrong3').style.display='block'">Cage</button>
+            <br>
+                <button class="right" id="right3" onclick="next3()">Continue</button>
+        </div>
+        <button class="wrong" id="wrong3" type="button" onclick="document.getElementById('correct3').style.display='block', hide3()">
             Right Answer
         </button>
-        <p id="correct4" style="display: none;">Clint Eastwood</p>
-        <iframe id="correct4" style="display: none;" src="" height="320" width="240" frameborder="1"></iframe>
+        <p id="correct3" style="display: none;" onclick="">
+            Clint Eastwood
+            <br>
+            <iframe style="background: center;" width="500" height="300" src="https://www.youtube.com/embed/S03T47hapAc?si=8TIKyl9J4WCEwycv" title="YouTube video player" frameborder="1" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+            <br>
+            <button onclick="next3()">Continue</button>
+        </p>
+        <button id="correct3" type="button" style="display: none;" onclick="next3()">Continue</button>
+    </div>
+    <div class="box" id="Q4" style="display: none;">
+        <div id="hide4">
+            <h3>Q5</h3>
+            <h1>What Song is this?</h1>
+            <button type="button" onclick="document.getElementById('audio1').play();">
+                Play Audio 🔊
+            </button>
+            
+            <audio id="audio1" src="gorillaz-new-gold-ft-tame-impala-bootie-brown-official-lyric-video_caJDVYsE.mp3" type="audio/mp3"></audio>            
+            <br>
+            <button class="button" type="button" onclick="document.getElementById('wrong4').style.display='block', hide4(), onclick=document.getElementById('wrong4').style.display='block'">Life</button>
+            <button class="button" type="button" onclick="document.getElementById('right4').style.display='block' ,  onclick=document.getElementById('right4').style.display='block'">New Gold</button>
+            <br>
+            <button class="button" type="button" onclick="document.getElementById('wrong4').style.display='block' , hide4(), onclick=document.getElementById('wrong4').style.display='block'">Dissapear</button>
+            <button class="button" type="button" onclick="document.getElementById('wrong4').style.display='block' , hide4(),  onclick=document.getElementById('wrong4').style.display='block'">Losing Our Minds</button>
+            <br>
+                <button class="right" id="right4" onclick="next4()">Continue</button>
+        </div>
+        <button class="wrong" id="wrong4" type="button" onclick="document.getElementById('correct4').style.display='block', hide4()">
+            Right Answer
+        </button>
+        <p id="correct4" style="display: none;" onclick="">
+            New Gold
+            <br>
+            <iframe style="background: center;" width="500" height="300" src="https://www.youtube.com/embed/S03T47hapAc?si=8TIKyl9J4WCEwycv" title="YouTube video player" frameborder="1" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+            <br>
+            <button onclick="next4()">Continue</button>
+        </p>
+        <button id="correct4" type="button" style="display: none;" onclick="next4()">Continue</button>
+    </div>
+    <div class="box" id="Q5" style="display: none;">
+        <div id="hide5">
+            <h3>Q5</h3>
+            <h1>What Song is this?</h1>
+            <button type="button" onclick="document.getElementById('audio1').play();">
+                Play Audio 🔊
+            </button>
+            
+            <audio id="audio1" src="gorillaz-cracker-island-ft-thundercat-official-audio_oAOwJ2an.mp3" type="audio/mp3"></audio>            
+            <br>
+            <button class="button" type="button" onclick="document.getElementById('wrong5').style.display='block', hide5(), onclick=document.getElementById('wrong5').style.display='block'">Collective</button>
+            <button class="button" type="button" onclick="document.getElementById('right5').style.display='block' ,  onclick=document.getElementById('right5').style.display='block'"> Cracker Island</button>
+            <br>
+            <button class="button" type="button" onclick="document.getElementById('wrong5').style.display='block' , hide5(), onclick=document.getElementById('wrong5').style.display='block'">Another World</button>
+            <button class="button" type="button" onclick="document.getElementById('wrong5').style.display='block' , hide5(), onclick=document.getElementById('wrong5').style.display='block'">In the Sky</button>
+            <br>
+                <button class="right" id="right5" onclick="next5()">Continue</button>
+        </div>
+        <button class="wrong" id="wrong5" type="button" onclick="document.getElementById('correct5').style.display='block', hide5()">
+            Right Answer
+        </button>
+        <p id="correct5" style="display: none;" onclick="">
+            Cracker Island
+            <br>
+            <iframe style="background: center;" width="500" height="300" src="https://www.youtube.com/embed/S03T47hapAc?si=8TIKyl9J4WCEwycv" title="YouTube video player" frameborder="1" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+            <br>
+            <button onclick="next5()">Continue</button>
+        </p>
+        <button id="correct5" type="button" style="display: none;" onclick="next5()">Continue</button>
+    </div>
+    <div class="box" id="Q6" style="display: none;">
+        <div id="hide6">
+            <h3>Q6</h3>
+            <h1>What Song is this?</h1>
+            <button type="button" onclick="document.getElementById('audio7').play();">
+                Play Audio 🔊
+            </button>
+            
+            <audio id="audio7" src="Gorillaz - Rhinestone Eyes (Official Audio)-[AudioTrimmer.com].mp3" type="audio/mp3"></audio>            
+            <br>
+            <button class="button" type="button" onclick="document.getElementById('wrong6').style.display='block', hide6(), onclick=document.getElementById('wrong6').style.display='block'">Bleach</button>
+            <button class="button" type="button" onclick="document.getElementById('wrong6').style.display='block' , hide6(), onclick=document.getElementById('wrong6').style.display='block'">Waves are Rising</button>
+            <br>
+            <button class="button" type="button" onclick="document.getElementById('wrong6').style.display='block' , hide6(), onclick=document.getElementById('wrong6').style.display='block'">Electric</button>
+            <button class="button" type="button" onclick="document.getElementById('right6').style.display='block' ,  onclick=document.getElementById('right6').style.display='block'">Rhinestone Eyes</button>
+            <br>
+                <button class="right" id="right6" onclick="next6()">Finish</button>
+        </div>
+        <button class="wrong" id="wrong6" type="button" onclick="document.getElementById('correct6').style.display='block', hide6()">
+            Right Answer
+        </button>
+        <p id="correct6" style="display: none;" onclick="">
+            Rhinestone Eyes
+            <br>
+            <iframe style="background: center;" width="500" height="300" src="https://www.youtube.com/embed/S03T47hapAc?si=8TIKyl9J4WCEwycv" title="YouTube video player" frameborder="1" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+            <br>
+            <button onclick="next6()">Continue</button>
+        </p>
+        <button id="correct6" type="button" style="display: none;" onclick="next6()">Continue</button>
+    </div>
+    <div id="Finish" style="display: none; text-align: center;">
+        <h2>
+            Congrats, You Finished.
+            <br>
+            Use this link to return to the home page.
+            <br>
+            <a href="project.html">Home</a>
+        </h2>
     </div>
 </body>
 </html>
